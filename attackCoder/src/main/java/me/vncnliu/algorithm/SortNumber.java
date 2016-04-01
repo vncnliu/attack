@@ -1,7 +1,8 @@
 package me.vncnliu.algorithm;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.junit.Test;
+
+import java.util.Random;
 
 /**
  * Copyright (c) 2008 by sangame.com.
@@ -13,9 +14,34 @@ import java.util.List;
 
 public class SortNumber {
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
 
-        List<Long> nums = new ArrayList<Long>(400000000);
-        System.out.println(Integer.MAX_VALUE);
+        boolean[] a = new boolean[10000000];
+        int[] nums = bulidRandomNumList(9999990,0,9999999);
+        for (int i = 0; i < nums.length; i++) {
+            a[nums[i]] = true;
+        }
+        for (int i = 0; i < a.length; i++) {
+            if(!a[i]){
+                System.out.println(i);
+            }
+        }
+    }
+
+    private int[] bulidRandomNumList(int length, int min, int max) {
+        Random random = new Random();
+        int[] nums = new int[length+1];
+        int[] a = new int[max+1];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = i;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            int ran = random.nextInt(max);
+            nums[i] = a[ran];
+            a[ran] = a[max];
+            max--;
+        }
+        return nums;
     }
 }
