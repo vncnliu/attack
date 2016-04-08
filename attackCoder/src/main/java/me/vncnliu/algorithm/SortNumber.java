@@ -17,16 +17,20 @@ public class SortNumber {
     @Test
     public void main() {
 
+        Runtime runtime = Runtime.getRuntime();
+        System.err.println(runtime.totalMemory()-runtime.freeMemory());
         boolean[] a = new boolean[10000000];
         int[] nums = bulidRandomNumList(9999990,0,9999999);
         for (int i = 0; i < nums.length; i++) {
             a[nums[i]] = true;
         }
+        System.err.println(runtime.totalMemory()-runtime.freeMemory());
         for (int i = 0; i < a.length; i++) {
             if(!a[i]){
                 System.out.println(i);
             }
         }
+        System.err.println(runtime.totalMemory()-runtime.freeMemory());
     }
 
     private int[] bulidRandomNumList(int length, int min, int max) {
