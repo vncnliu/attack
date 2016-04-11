@@ -5,14 +5,12 @@ import org.junit.Test;
 import java.util.Random;
 
 /**
- * Copyright (c) 2008 by sangame.com.
  * All right reserved.
- * Created by liuyaqing@sangame.com on 2016/3/9.
- * 给定一个包含32为整数的顺序文件，至多40亿个整数，次序随机，查找一个此文件中不存在的整数
- * 内存充足情况与只有上百字节的情况
+ * Created by vncnliu@gmail.com on 2016/3/9.
+ * 位图查找一定范围内不存在已知数据中的数
  */
 
-public class SortNumber {
+public class FindNumber {
 
     @Test
     public void main() {
@@ -33,6 +31,13 @@ public class SortNumber {
         System.err.println(runtime.totalMemory()-runtime.freeMemory());
     }
 
+    /**
+     * 生成随机的已知数据
+     * @param length 数据个数
+     * @param min 最小值
+     * @param max 最大值
+     * @return
+     */
     private int[] bulidRandomNumList(int length, int min, int max) {
         Random random = new Random();
         int[] nums = new int[length+1];
