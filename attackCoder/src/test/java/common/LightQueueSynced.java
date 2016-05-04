@@ -17,15 +17,15 @@ public class LightQueueSynced {
         return QUEUE_LIST;
     }
 
-    public static synchronized void queue(String seatNo){
+    public static synchronized void queue(String key){
         //System.out.println("add:"+seatNo);
-        if(!Strings.isNullOrEmpty(seatNo)&&!QUEUE_LIST.contains(seatNo)){
-            QUEUE_LIST.add(seatNo);
+        if(!Strings.isNullOrEmpty(key)&&!QUEUE_LIST.contains(key)){
+            QUEUE_LIST.add(key);
         }
     }
 
-    public static synchronized void remove(String seatNo){
-        QUEUE_LIST.remove(seatNo);
+    public static synchronized void remove(String key){
+        QUEUE_LIST.remove(key);
     }
 
     public static synchronized String pollFirst(){
