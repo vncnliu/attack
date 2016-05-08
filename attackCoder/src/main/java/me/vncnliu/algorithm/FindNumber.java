@@ -2,6 +2,7 @@ package me.vncnliu.algorithm;
 
 import org.junit.Test;
 
+import java.io.*;
 import java.util.Random;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Random;
 public class FindNumber {
 
     @Test
-    public void main() {
+    public void findUseBitMap() {
 
         Runtime runtime = Runtime.getRuntime();
         System.err.println(runtime.totalMemory()-runtime.freeMemory());
@@ -52,5 +53,23 @@ public class FindNumber {
             max--;
         }
         return nums;
+    }
+
+    @Test
+    public void findWithBipartite() throws IOException {
+        bulidFile();
+    }
+
+    public File bulidFile() throws IOException {
+
+        String filePath="D:\\data\\number.txt";
+        OutputStream outputStream = new FileOutputStream(filePath);
+        Long  i = 1L;
+        while (i<4000000000L) {
+            outputStream.write(i.byteValue());
+            outputStream.write(",".getBytes());
+        }
+        outputStream.close();
+        return new File(filePath);
     }
 }
