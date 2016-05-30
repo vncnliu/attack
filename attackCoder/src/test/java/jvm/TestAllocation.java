@@ -1,4 +1,4 @@
-package me.vncnliu.jvm;
+package jvm;
 
 /**
  * Copyright (c) 2008 by vncnliu.

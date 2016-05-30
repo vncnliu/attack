@@ -1,4 +1,4 @@
-package me.vncnliu.javasource;
+package javasource;
 
 /**
  * All right reserved.
