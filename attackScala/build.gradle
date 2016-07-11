@@ -1,0 +1,10 @@
+group 'vncnliu.vicp.cc'
+version '1.0-SNAPSHOT'
+apply plugin: 'scala'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.1'
+}
