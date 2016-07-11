@@ -1,4 +1,4 @@
-package me.vncnliu.jvm;
+package jvm;
 
 /**
  * All right reserved.

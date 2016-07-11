@@ -1,4 +1,4 @@
-package me.vncnliu.java8;
+package java8;
 
 import javax.validation.constraints.NotNull;
 

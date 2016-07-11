@@ -1,4 +1,4 @@
-package me.vncnliu.algorithm;
+package algorithm;
 
 import org.junit.Test;
 
