@@ -2,7 +2,6 @@ package controllers
 
 import config.Contants
 import controllers.Application._
-import play.api.http.Status._
 import play.api.mvc.Action
 import play.mvc.Controller
 
